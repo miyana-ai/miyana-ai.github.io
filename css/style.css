@@ -1,0 +1,1146 @@
+:root {
+    --primary-color: #0F9D58;
+    --background-color: #f0f3f7;
+    --secon-color: #9da2ad;
+    --grey: #7a7a7b;
+    --white: #ffffff;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: unset;
+    text-decoration: none;
+}
+
+body,
+html {
+    background-color: var(--background-color);
+    scroll-behavior: smooth;
+    position: relative;
+    overflow-x: hidden;
+}
+
+
+.logo {
+    display: flex; /* Aligns logo and text in a row */
+    align-items: center; /* Centers items vertically */
+}
+
+.logo-img {
+    width: 40px; /* Adjust the width as needed */
+    height: auto; /* Maintains aspect ratio */
+    margin-right: 8px; /* Space between logo and text */
+}
+
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    background-color: var(--background-color);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.menu-wrap {
+    max-width: 1366px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary-color);
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-item {
+    margin-left: 1rem;
+    padding: .5rem 1.5rem;
+    font-weight: 600;
+    color: var(--grey);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+.menu-toggle {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* Hamburger lines */
+.hamburger {
+    width: 30px;
+    height: 4px;
+    background: black; /* Color of the hamburger lines */
+    margin: 3px 0; /* Spacing between lines */
+}
+
+.menu-item:hover,
+.menu-item.active {
+    color: var(--white);
+    background-color: var(--primary-color);
+    border-radius: 1rem;
+}
+
+/* Targeting only the "Get in touch" item with specific hover and active styles */
+#get-in-touch {
+    color: #ffffff; /* White text color */
+    background-color: red; /* Solid red background */
+    border-radius: 1rem; /* Rounded corners for the button look */
+    padding: .5rem 1.5rem; /* Padding for button shape */
+    transition: .5s ease-in-out; /* Smooth transition effect */
+    display: inline-block; 
+
+}
+
+/* Hover and active states for "Get in touch" */
+#get-in-touch:hover,
+#get-in-touch.active {
+    color: #ffffff; /* Keep white text color */
+    background-color: rgb(204, 31, 31); /* Darker red when hovered */
+    border-radius: 1rem; /* Maintain rounded corners */
+}
+
+
+
+.cart-btn {
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    font-size: 2rem;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+.cart-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: 1rem;
+}
+
+.fullheight {
+    height: 100vh;
+}
+
+.align-items-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.bg-img {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 0; /* Adjust if necessary */
+}
+
+.bg-img-fixed {
+    background-attachment: fixed;
+}
+
+.container {
+    width: 100%;
+    max-width: 1366px;
+    margin: 0 auto;
+    margin-bottom: 150px;
+    /* margin-top: auto; */
+}
+.container-we {
+    width: 100%;
+    max-width: 1366px;
+    margin: 0 auto;
+    margin-top: 150px;
+}
+
+section {
+    padding: 0.5rem 0;
+}
+
+.slogan {
+    text-align: left;
+}
+
+.slogan h1 {
+    font-size: 7rem;
+    color: var(--primary-color);
+}
+
+.slogan button {
+    padding: 1rem 5rem;
+    outline: none;
+    border: none;
+    background-color: var(--background-color);
+    border: .125rem solid var(--primary-color);
+    border-radius: 2rem;
+    color: var(--primary-color);
+    margin: 3rem 0;
+    cursor: pointer;
+    font-weight: 600;
+    transition: .5s ease-in-out;
+}
+
+.slogan button:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+
+/* Ensure consistent box height */
+.service-box {
+    background-color: var(--white); /* or whatever background color */
+    border-radius: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    padding: 3rem;
+    min-height: 50px; /* Set a minimum height */
+    height: auto; /* Allows height to grow if content exceeds */
+    display: flex;
+    flex-direction: column; /* This ensures the content inside aligns vertically */
+    justify-content: space-between; /* Aligns content inside the box */
+}
+
+.link-button {
+    text-decoration: none; /* Remove underline from the entire link */
+    color: inherit; /* Use the current text color */
+    border: none; /* Remove any default border */
+    background: none; /* Remove background if any */
+    padding: 0; /* Adjust padding as needed */
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+
+.link-button .elementor-button-text {
+    text-decoration: underline; /* Underline only the text */
+}
+
+.arrow {
+    color: red; /* Color for the ">" */
+    margin-left: 0.5rem; /* Add space between text and arrow */
+    font-size: 2rem; /* Increase the size of the arrow */
+    vertical-align: middle; /* Align the arrow vertically with text */
+    text-decoration: none; /* Ensure the arrow has no underline */
+    display: inline; /* Ensure the arrow behaves like an inline element */
+}
+
+.link-button:hover {
+    color: var(--primary-color); /* Change color on hover if needed */
+}
+
+.elementor-counter {
+    text-align: center; /* Center the counter content */
+    margin: 1.5rem; 
+    margin-top: auto;
+    margin-bottom: 0;
+}
+
+.elementor-counter-number {
+    font-size: 2.5rem; /* Larger font size for the numbers */
+    font-weight: bold; /* Make numbers bold */
+    color: var(--primary-color); /* Use your primary color */
+}
+
+.elementor-grid {
+    display: flex;
+    justify-content: space-around; /* Adjust as needed */
+    flex-wrap: wrap;
+    margin: 0 auto; /* Center the grid */
+}
+.elementor-counter-title {
+    font-size: 1.2rem; /* Title size */
+    margin-top: 0.5rem; /* Space above the title */
+    color: #333; /* Dark color for better visibility */
+}
+
+@media (max-width: 768px) {
+    .elementor-counter {
+        margin: 1rem 0; /* Adjust margin for mobile */
+    }
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+.fullwidth {
+    width: 100%;
+}
+
+#about {
+    margin-top: 250px;
+    margin-bottom: 0; 
+
+  
+}
+#home {
+    padding-bottom: 250px;
+    padding-top: 250px;
+    margin-bottom: auto;
+    margin-top: auto;
+}
+
+#food-menu-section {
+    margin-top: 0.5px; /* Adjust this value for your desired spacing */
+    min-height: 0vh;
+    padding-bottom: 10px;
+}
+
+#about img {
+    border-radius: 2rem;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
+        rgba(17, 17, 26, 0.1) 0px 16px 56px,
+        rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+.food-menu h1, .about-slogan h3 {
+    margin: 1rem 0; /* Ensure they are the same */
+  
+}
+.about, #food-menu-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 10vh; /* Adjust as needed */
+    margin-top: 8px;
+}
+
+.about-slogan {
+    padding: 4rem;
+    background-color: var(--white);
+    border-radius: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+
+.about-slogan.start {
+    transform: translateX(-10rem) !important;
+}
+
+.about-slogan h3 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    color: var(--grey);
+}
+
+.primary-color {
+    color: var(--primary-color);
+}
+
+.food-menu {
+    padding: 6rem;
+    background-color: var(--white);
+    border-radius: 2rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.food-menu h1 {
+    color: var(--grey);
+}
+
+.food-menu p {
+    margin: 2rem 0;
+}
+
+.food-category {
+    display: flex;
+}
+
+.food-category button {
+    padding: .5rem 2.5rem;
+    margin: 0 1rem;
+    outline: none;
+    border: 1px solid var(--primary-color);
+    background-color: transparent;
+    color: var(--primary-color);
+    font-weight: 600;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.food-category button:hover,
+.food-category button.active {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.food-item-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 3rem;
+}
+
+.food-item {
+    width: 25%;
+    height: 30rem;
+    padding: 1rem;
+}
+
+.item-wrap {
+    height: 100%;
+    transition: .4s ease-in-out;
+    cursor: pointer;
+    border-radius: 2rem;
+}
+
+.item-wrap:hover {
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+        rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.item-img {
+    height: 60%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 2rem;
+}
+
+.img-holder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: .5s ease-in-out;
+    border-radius: 2rem;
+}
+
+.img-holder:hover {
+    transform: scale(2) rotate(45deg);
+}
+
+.item-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem;
+    padding: 0 1rem;
+}
+
+/*  */
+.industries {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+.industry-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    bottom: -2.5rem;
+}
+
+.industry-item {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3rem;
+   
+}
+
+.industry-item img {
+    max-width: 50%;
+    height: auto;
+   
+}
+
+.industry-item h3 {
+    margin: 10px 0;
+    color: var(--primary-color);
+    
+}
+
+/*  */
+
+
+
+
+
+
+.item-info h3 {
+    color: var(--grey);
+}
+
+.item-info h2 {
+    color: #161616; /* Change to your desired hex color */
+}
+
+.item-info>div:first-child {
+    text-align: left;
+}
+
+.review-wrap {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--white);
+    border-radius: 3rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.review-wrap.active {
+    transform: scale(1.2) !important;
+}
+
+.review-content {
+    padding: 3rem;
+    border-bottom: .125rem solid var(--grey);
+    position: relative;
+    text-align: center;
+}
+
+.review-img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -2.5rem;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 2rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.review-info {
+    padding: 3rem;
+    text-align: center;
+}
+
+.rating {
+    margin-top: 2rem;
+}
+
+.rating i {
+    color: var(--primary-color);
+}
+
+.footer {
+    color: var(--white);
+}
+
+.footer-social-icons{
+    display: flex;
+    font-size: 28px; /* Change this value to increase/decrease the size */
+    color: white; /* You can also set the icon color here */
+    gap: 30px;  
+}
+
+.footer h1 {
+    color: var(--primary-color);
+}
+
+.input-group {
+    padding: 1rem;
+    border: .125rem solid var(--primary-color);
+    border-radius: 2rem;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.input-group input {
+    flex: auto;
+    outline: none;
+    border: none;
+    color: var(--primary-color);
+    background-color: transparent;
+}
+
+.input-group button {
+    padding: .5rem 1rem;
+    outline: none;
+    border: none;
+    background-color: var(--primary-color);
+    border-radius: 1rem;
+    color: var(--white);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 70px;
+    right: 70px;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    padding: .5rem;
+    z-index: 99;
+    display: none;
+}
+
+.food-item-wrap>div {
+    display: none;
+}
+
+.food-item-wrap.all>div {
+    display: block;
+}
+
+.food-item-wrap.Python>div.Python-type {
+    display: block;
+}
+
+.food-item-wrap.Data_Science>div.Data_Science-type {
+    display: block;
+}
+
+.food-item-wrap.GEN_AI>div.GEN_AI-type {
+    display: block;
+}
+
+.food-item-wrap.Database>div.Database-type {
+    display: block;
+}
+
+/* ANIMATION */
+
+.left-to-right {
+    transform: translateX(-150%);
+    transition: 1s ease-in-out;
+}
+
+.left-to-right.start {
+    transform: translateX(0);
+}
+
+.right-to-left {
+    transform: translateX(150%);
+    transition: 1s ease-in-out;
+}
+
+.right-to-left.start {
+    transform: translateX(0);
+}
+
+.zoom {
+    transform: scale(0);
+    transition: .6s ease-in-out;
+}
+
+.zoom.start {
+    transform: unset;
+}
+
+.bottom-up {
+    transform: translateY(30%);
+    transition: .8s ease-in-out;
+}
+
+.bottom-up.start {
+    transform: translateY(0);
+}
+
+.delay-2 {
+    transition-delay: .2s;
+}
+
+.delay-4 {
+    transition-delay: .4s;
+}
+
+.delay-6 {
+    transition-delay: .6s;
+}
+
+.delay-8 {
+    transition-delay: .8s;
+}
+
+.delay-10 {
+    transition-delay: .10s;
+}
+
+.delay-12 {
+    transition-delay: .12s;
+}
+
+
+
+
+
+
+/* GRID SYSTEM */
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+[class*="col-"] {
+    padding: 1rem;
+}
+
+.col-1 {
+    width: 8.33%;
+}
+
+.col-2 {
+    width: 16.66%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+.col-5 {
+    width: 41.66%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33%;
+}
+
+.col-11 {
+    width: 91.66%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+.mb-nav {
+    display: none;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+    * {
+        font-size: 13px;
+    }
+
+    .h-xs {
+        display: none;
+    }
+
+    h1 {
+        font-size: 3rem !important;
+    }
+
+    span {
+        font-size: inherit;
+    }
+
+    .cart-btn i {
+        font-size: 2rem;
+    }
+
+    .about {
+        background-image: url(assets/dan-gold-4_jhDO54BYg-unsplash.jpg);
+        background-attachment: fixed;
+        padding: 1rem 0;
+        min-height: 10vh;
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-bottom: auto;
+        margin-top: auto;
+    }
+
+    .about-slogan.start {
+        transform: translateX(0) !important;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        margin-bottom: auto;
+        margin-top: auto;
+    }
+
+    .menu-toggle {
+        display: flex; /* Show the toggle button on mobile */
+    }
+    
+    /* .menu {
+        flex-direction: column; 
+        background-color: white; 
+        position: absolute;
+        top: 60px; 
+        left: 0;
+        right: 0;
+        border-radius: 0.5rem;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px; 
+        display: none; 
+    }
+
+ 
+    .menu.active {
+        display: flex; 
+    }
+
+
+    .menu-item {
+        padding: 1rem; 
+        border-bottom: 1px solid #f0f0f0;
+    
+    .menu-item.active {
+        font-weight: bold;
+    } */
+
+    #get-in-touch {
+        display: block; /* Ensure it's displayed */
+        padding: 1rem; /* Add padding for touch targets */
+        text-align: center; /* Center the text */
+        font-weight: bold; /* Bold text */
+        background-color: #0F9D58; /* Background color */
+        color: white; /* Text color */
+        border-radius: 0.5rem; /* Rounded corners */
+        margin: 1rem; /* Add margin around the button */
+    }
+
+    /* Hide other menu items except "Get in touch" on mobile */
+    .menu-item:not(#get-in-touch) {
+        display: none; /* Hide all other menu items */
+    }
+
+    .menu-item.active {
+        font-weight: bold; /* Highlight active item */
+    }
+
+    .container-we {
+        width: 100%;
+        max-width: 1366px;
+        margin: 0 auto;
+        margin-bottom: 150px;
+        margin-top: 150px;
+    }
+
+    .service-box {
+        background-color: var(--white); /* Keeps the background color */
+        border-radius: 1.5rem; /* You can reduce the border radius for mobile */
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 6px; /* Smaller shadow for mobile */
+        padding: 2rem; /* Adjust padding to fit smaller screen */
+        min-height: 40px; /* Slightly reduce the min-height if needed */
+        height: auto; /* Keeps it dynamic based on content */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-bottom: auto;
+        margin-top: auto;
+    }
+
+    .food-menu {
+        padding: 2rem 0;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        margin-bottom: 0;
+        margin-top: 0;
+        margin-bottom: auto;
+        margin-top: auto;
+    }
+
+    .food-item {
+        width: 50%;
+        height: 25rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        margin-bottom: 0;
+        margin-top: 0;
+
+    }
+
+    .food-category {
+        overflow-y: scroll;
+    }
+
+    .food-category button {
+        width: max-content;
+    }
+
+    .back-to-top {
+        bottom: 6rem;
+        right: 1rem;
+    }
+
+    .review-wrap.active {
+        transform: unset !important;
+    }
+
+    /* MOBILE NAV */
+
+    .mb-nav {
+        position: fixed;
+        bottom: 0;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--white);
+        z-index: 99;
+        overflow: hidden;
+        border-top-left-radius: 2rem;
+        border-top-right-radius: 2rem;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+
+    .mb-nav-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 25%;
+        padding: 1rem 0;
+    }
+
+    .mb-nav-item i,
+    .mb-nav-item a {
+        font-size: 2rem;
+        color: var(--secon-color);
+        z-index: 2;
+        transition: .5s ease-in-out;
+    }
+
+    .mb-nav-item.active i {
+        color: var(--white);
+    }
+
+    .mb-move-item {
+        position: absolute;
+        left: 0;
+        width: 25%;
+        height: 100%;
+        background-color: var(--primary-color);
+        transition: .5s ease-in-out;
+    }
+
+    /* END MOBILE NAV */
+
+    .col-xs-1 {
+        width: 8.33%;
+
+    }
+
+    .col-xs-2 {
+        width: 16.66%;
+    }
+
+    .col-xs-3 {
+        width: 25%;
+    }
+
+    .col-xs-4 {
+        width: 33.33%;
+    }
+
+    .col-xs-5 {
+        width: 41.66%;
+    }
+
+    .col-xs-6 {
+        width: 50%;
+    }
+
+    .col-xs-7 {
+        width: 58.33%;
+    }
+
+    .col-xs-8 {
+        width: 66.66%;
+    }
+
+    .col-xs-9 {
+        width: 75%;
+    }
+
+    .col-xs-10 {
+        width: 83.33%;
+    }
+
+    .col-xs-11 {
+        width: 91.66%;
+    }
+
+    .col-xs-12 {
+        width: 100%;
+    }
+
+    .h-xs {
+        display: block;
+    }
+    .hide-on-mobile {
+        display: none; /* Hides the div on mobile devices */
+    }
+}
+
+
+
+
+
+
+
+
+/* General Styles for the Contact Section */
+.contact-section {
+    padding: 50px 20px; /* Padding for the section */
+    background-color: rgba(255, 255, 255, 0.8); /* Optional: Light background for text readability */
+    background-size: cover; /* Ensure the image covers the section */
+    background-position: center; /* Center the background image */
+}
+
+/* Additional styles for your contact-section if needed */
+.contact-header {
+    text-align: center; /* Center the text */
+    margin-bottom: 30px; /* Space below the header */
+    color: #333; /* Dark text color for readability */
+}
+
+.contact-header h1 {
+    font-size: 2.5rem; /* Large font size */
+    color: var(--primary-color); /* Dark color */
+    
+}
+
+.contact-header span {
+    font-size: 1.2rem; /* Slightly smaller font size */
+    color: #3f3f3f; /* Grey color for the subtitle */
+}
+
+/* Flexbox for Row Layout */
+.contact-row {
+    display: flex; /* Flexbox for layout */
+    justify-content: center; /* Center items horizontally */
+    align-items: flex-start; /* Align items to the top */
+    gap: 40px; /* Space between columns */
+    max-width: 1200px; /* Maximum width of the section */
+    margin: 0 auto; /* Center the row */
+}
+
+.contact-col {
+    flex: 1; /* Allow columns to grow equally */
+    min-width: 350px; /* Minimum width for smaller screens */
+    max-width: 600px; /* Maximum width to keep them side by side */
+}
+
+/* Contact Info Box Styles */
+.contact-info-box {
+    background-color: #fff; /* White background for contrast */
+    padding: 30px; /* Inner spacing */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: left; /* Align text to the left */
+}
+
+.contact-info-box h1 {
+    font-size: 1.8rem; /* Font size for heading */
+    margin-bottom: 10px; /* Space below heading */
+    color:  var(--primary-color);
+}
+
+.contact-info-box p {
+    font-size: 1rem; /* Font size for paragraph */
+    margin-top: 10px; /* Space above paragraph */
+}
+
+/* Form Control Styles */
+.contact-form {
+    background-color: #fff; /* White background for the form */
+    padding: 30px; /* Inner spacing */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.contact-form-inputs {
+    display: flex; /* Flexbox for input layout */
+    flex-direction: column; /* Stack inputs vertically */
+    gap: 20px; /* Space between inputs */
+    margin-bottom: 20px; /* Space below inputs */
+}
+
+.contact-input-field {
+    height: 50px; /* Increased height for input fields */
+    padding: 10px; /* Inner spacing */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Font size for inputs */
+}
+
+.contact-text-area {
+    margin-bottom: 20px; /* Space below textarea */
+}
+
+textarea {
+    width: 100%; /* Full width */
+    height: 150px; /* Increased height for textarea */
+    padding: 10px; /* Inner spacing */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Font size for textarea */
+    resize: vertical; /* Allow vertical resizing */
+}
+
+/* Button Styles */
+.contact-form-button {
+    text-align: center; /* Center button */
+}
+
+.contact-btn {
+    background-color:  var(--primary-color); /* Primary color */
+    color: white; /* White text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 20px; /* Inner spacing */
+    font-size: 1rem; /* Font size for button */
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+.contact-btn:hover {
+    background-color: #00a700; /* Darker shade on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .contact-row {
+        flex-direction: column; /* Stack columns on smaller screens */
+    }
+}

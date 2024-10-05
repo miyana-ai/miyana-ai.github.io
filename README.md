@@ -1,1 +1,1 @@
-# navi-ai-solution.github.io
+# miyana-ai.github.io
